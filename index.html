@@ -59,9 +59,10 @@
   .hero-copy{position:relative;padding:64px 0 72px;align-self:center}
   .kicker{display:inline-block;font-weight:800;font-size:.85rem;letter-spacing:.14em;color:var(--blue);margin-bottom:18px}
   .kicker::before{content:"";display:inline-block;width:28px;height:3px;background:var(--blue);vertical-align:middle;margin-left:10px}
-  h1{font-weight:900;font-size:clamp(2.9rem,7vw,5.6rem);line-height:.95;letter-spacing:-.02em}
+  h1{font-weight:900;font-size:clamp(2.9rem,5.4vw,4.5rem);line-height:.95;letter-spacing:-.02em}
   h1 .brand{display:block;font-style:italic;direction:ltr;text-align:right;letter-spacing:-.03em}
   h1 .brand b{color:var(--blue)}
+  h1 .h1-line{display:block;white-space:nowrap}
   .hero-sub{font-size:clamp(1.1rem,2vw,1.35rem);font-weight:700;margin-top:18px}
   .hero-sub i{font-style:normal;color:var(--gray);margin:0 6px}
   .hero-lead{color:#444;margin-top:8px;max-width:30em}
@@ -217,7 +218,8 @@
     section{padding:64px 0}
     .offer .wrap{justify-content:center;text-align:center}
   }
-  @media (min-width:901px){ .sticky{display:none} body{padding-bottom:0} .hero-img img{width:460px;transform:translate(117px,-104px)} }
+  @media (min-width:901px){ .sticky{display:none} body{padding-bottom:0} }
+  @media (min-width:1200px){ .hero-img img{width:460px;transform:translate(117px,-104px)} }
   @media (max-width:480px){
     .who{grid-template-columns:1fr}
     .stats{grid-template-columns:1fr 1fr 1fr}
@@ -248,7 +250,7 @@
     <div class="hero-copy">
       <h1>
         <span class="brand en">YARINCO <b>BJJ</b></span>
-        אימונים פרטיים
+        <span class="h1-line">אימונים פרטיים</span>
       </h1>
       <p class="hero-sub">ג'יו ג'יטסו ברזילאי<i>/</i><span class="en">MMA</span><i>/</i>הגנה עצמית</p>
       <p class="hero-lead">בואו לפתח מיומנויות לחימה ויכולות אתלטיות, בקצב שלכם ועם מאמן שמתמקד רק בכם.</p>
