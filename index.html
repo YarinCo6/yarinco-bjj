@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YARINCO BJJ | אימונים פרטיים</title>
+<meta name="description" content="אימונים פרטיים בג'יו ג'יטסו ברזילאי, MMA והגנה עצמית בתל אביב. הרב יוסף צוברי 22, מול בית הספר לאומנויות.">
+<meta property="og:title" content="YARINCO BJJ | אימונים פרטיים">
+<meta property="og:description" content="ג'יו ג'יטסו ברזילאי / MMA / הגנה עצמית. תל אביב.">
+<meta property="og:image" content="img/hero.webp">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+  /* Palette: only the colors from the poster */
+  :root{
+    --ink:#0b0b0b;
+    --ink-2:#161616;
+    --paper:#ffffff;
+    --fog:#f1f1f1;
+    --gray:#8c8c8c;
+    --blue:#1f1fff;
+    --gold:#f4c419;
+    --wa:#1f1fff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Heebo',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:84px}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+  .en{font-family:'Heebo',sans-serif;direction:ltr;unicode-bidi:isolate}
+
+  /* Placeholder marker: replace these before going live */
+  .ph{background:repeating-linear-gradient(45deg,rgba(244,196,25,.18) 0 8px,rgba(244,196,25,.08) 8px 16px);outline:2px dashed var(--gold);outline-offset:2px;border-radius:4px;padding:0 6px}
+
+  /* ---------- NAV ---------- */
+  nav{position:sticky;top:0;z-index:50;background:var(--ink);color:var(--paper)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-weight:900;font-style:italic;font-size:1.35rem;letter-spacing:-.02em}
+  .logo b{color:var(--blue)}
+  nav ul{display:flex;gap:28px;list-style:none;font-weight:500;font-size:.95rem}
+  nav ul a{opacity:.75;transition:opacity .2s}
+  nav ul a:hover{opacity:1}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:800;border-radius:6px;padding:14px 26px;font-size:1rem;transition:transform .15s,background .2s;cursor:pointer;border:0}
+  .btn:active{transform:scale(.97)}
+  .btn-blue{background:var(--blue);color:var(--paper)}
+  .btn-blue:hover{background:#1414d6}
+  .btn-ghost{border:2px solid currentColor;padding:12px 24px}
+  .btn-sm{padding:9px 18px;font-size:.9rem}
+  .btn svg{width:20px;height:20px;flex:none}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;overflow:hidden;background:var(--paper)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;align-items:end;min-height:calc(100svh - 60px);gap:24px}
+  .hero-bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+  .hero-bg span{font-weight:900;font-style:italic;font-size:clamp(9rem,26vw,24rem);line-height:.8;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:2px #e6e6e6;white-space:nowrap}
+  .hero-copy{position:relative;padding:64px 0 72px;align-self:center}
+  .kicker{display:inline-block;font-weight:800;font-size:.85rem;letter-spacing:.14em;color:var(--blue);margin-bottom:18px}
+  .kicker::before{content:"";display:inline-block;width:28px;height:3px;background:var(--blue);vertical-align:middle;margin-left:10px}
+  h1{font-weight:900;font-size:clamp(2.9rem,7vw,5.6rem);line-height:.95;letter-spacing:-.02em}
+  h1 .brand{display:block;font-style:italic;direction:ltr;text-align:right;letter-spacing:-.03em}
+  h1 .brand b{color:var(--blue)}
+  .hero-sub{font-size:clamp(1.1rem,2vw,1.35rem);font-weight:700;margin-top:18px}
+  .hero-sub i{font-style:normal;color:var(--gray);margin:0 6px}
+  .hero-lead{color:#444;margin-top:8px;max-width:30em}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+  .hero-img{position:relative;align-self:end}
+  .hero-img img{width:100%;max-width:520px;margin-inline:auto;mix-blend-mode:multiply}
+  .medal{position:absolute;top:22%;left:0;background:var(--ink);color:var(--paper);padding:12px 16px;border-radius:8px;font-weight:800;font-size:.9rem;line-height:1.25;border-right:4px solid var(--gold);box-shadow:0 10px 30px rgba(0,0,0,.2)}
+  .medal small{display:block;color:var(--gold);font-size:.75rem;letter-spacing:.1em}
+
+  /* ---------- OFFER BANNER (slanted, like the inspiration's sale strip) ---------- */
+  .offer{background:var(--ink);padding:0}
+  .offer-inner{position:relative;background:var(--blue);color:var(--paper);clip-path:polygon(0 0,100% 0,100% 100%,0 100%);overflow:hidden}
+  .offer-inner::before,.offer-inner::after{content:"";position:absolute;top:0;bottom:0;width:120px;background:var(--ink);transform:skewX(-18deg)}
+  .offer-inner::before{right:-60px}
+  .offer-inner::after{left:-60px}
+  .offer .wrap{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:34px 0;flex-wrap:wrap}
+  .offer h2{font-weight:900;font-style:italic;font-size:clamp(1.8rem,4.2vw,3rem);line-height:1}
+  .offer p{font-weight:500;opacity:.9;margin-top:6px}
+  .offer .btn{background:var(--paper);color:var(--blue)}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:88px 0}
+  .dark{background:var(--ink);color:var(--paper)}
+  .fog{background:var(--fog)}
+  .sec-head{margin-bottom:44px}
+  .sec-head .kicker{margin-bottom:10px}
+  h2.title{font-weight:900;font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.05;letter-spacing:-.01em}
+  h2.title em{font-style:normal;color:var(--blue)}
+  .dark h2.title em{color:var(--blue)}
+  .sec-head p{color:var(--gray);margin-top:10px;max-width:36em}
+
+  /* disciplines */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:var(--ink-2);border:1px solid #242424;border-radius:10px;padding:30px 26px;position:relative;overflow:hidden;transition:border-color .2s,transform .2s}
+  .card:hover{border-color:var(--blue);transform:translateY(-3px)}
+  .card .num{position:absolute;top:10px;left:18px;font-weight:900;font-style:italic;font-size:4.2rem;line-height:1;color:#222}
+  .card h3{font-weight:900;font-size:1.5rem;margin-bottom:8px;position:relative}
+  .card h3 .en{font-style:italic}
+  .card p{color:#b5b5b5;position:relative}
+  .card .bar{width:36px;height:4px;background:var(--blue);margin-bottom:18px}
+
+  /* who it's for */
+  .who{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .who div{background:var(--paper);border-radius:10px;padding:24px 20px;border-top:4px solid var(--ink)}
+  .who div:nth-child(odd){border-top-color:var(--blue)}
+  .who h3{font-weight:800;font-size:1.15rem;margin-bottom:6px}
+  .who p{color:#555;font-size:.95rem}
+
+  /* about */
+  .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+  .about-img{position:relative}
+  .about-img img{border-radius:10px;width:100%;filter:grayscale(1) contrast(1.05)}
+  .about-img::after{content:"";position:absolute;inset:16px -16px -16px 16px;border:3px solid var(--blue);border-radius:10px;z-index:-1}
+  .about-img{z-index:0}
+  .about p{color:#bbb;margin-bottom:14px}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+  .stat{border-right:3px solid var(--blue);padding:4px 14px}
+  .stat b{display:block;font-weight:900;font-size:1.6rem;line-height:1.1}
+  .stat span{color:var(--gray);font-size:.88rem}
+  .club{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-weight:800;letter-spacing:.06em;font-size:.85rem;color:var(--paper);border:1px solid #333;border-radius:40px;padding:8px 16px}
+  .club i{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+
+  /* session */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
+  .step{padding:26px 22px;border-right:1px solid #ddd;counter-increment:s}
+  .step:first-child{border-right:0}
+  .step::before{content:"0" counter(s);display:block;font-weight:900;font-style:italic;font-size:2.4rem;color:var(--blue);line-height:1;margin-bottom:10px}
+  .step h3{font-weight:800;margin-bottom:4px}
+  .step p{color:#555;font-size:.95rem}
+  .gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px;margin-top:44px}
+  .gallery > *{border-radius:10px;overflow:hidden;aspect-ratio:4/3}
+  .gallery img{width:100%;height:100%;object-fit:cover}
+  .gph{display:flex;align-items:center;justify-content:center;text-align:center;background:repeating-linear-gradient(45deg,#e6e6e6 0 10px,#ededed 10px 20px);outline:2px dashed var(--gold);outline-offset:-8px;color:#666;font-weight:700;font-size:.9rem;padding:16px}
+
+  /* pricing */
+  .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+  .price{background:var(--ink-2);border:1px solid #262626;border-radius:12px;padding:32px 26px;display:flex;flex-direction:column}
+  .price.hot{background:var(--blue);border-color:var(--blue);transform:translateY(-10px)}
+  .price .tag{align-self:flex-start;font-size:.75rem;font-weight:800;letter-spacing:.1em;background:var(--paper);color:var(--blue);border-radius:30px;padding:3px 12px;margin-bottom:12px}
+  .price h3{font-weight:800;font-size:1.2rem}
+  .price .amt{font-weight:900;font-size:2.6rem;line-height:1.1;margin:12px 0 4px}
+  .price .per{color:#aaa;font-size:.9rem}
+  .price.hot .per{color:#dcdcff}
+  .price ul{list-style:none;margin:20px 0 26px;flex:1}
+  .price li{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:.95rem}
+  .price li::before{content:"✓";color:var(--blue);font-weight:900;margin-left:8px}
+  .price.hot li::before{color:var(--paper)}
+  .price .btn{width:100%}
+  .price.hot .btn{background:var(--paper);color:var(--blue)}
+
+  /* location */
+  .loc{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;align-items:stretch}
+  .loc-info h3{font-weight:900;font-size:1.8rem;line-height:1.15}
+  .loc-info .near{color:var(--blue);font-weight:700;margin-top:6px}
+  .loc-info .hours{margin-top:22px;color:#555}
+  .loc-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .map{border-radius:12px;overflow:hidden;min-height:320px;background:#ddd}
+  .map iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(1)}
+
+  /* testimonials */
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .quote{background:var(--ink-2);border-radius:12px;padding:28px 24px;border:1px solid #262626}
+  .quote::before{content:"”";display:block;font-weight:900;font-size:4rem;line-height:.6;color:var(--blue);margin-bottom:10px}
+  .quote p{color:#ddd}
+  .quote b{display:block;margin-top:14px;font-size:.9rem;color:var(--gray)}
+
+  /* faq */
+  .faq{max-width:780px}
+  details{border-bottom:1px solid #ddd}
+  summary{list-style:none;cursor:pointer;padding:20px 0;font-weight:800;font-size:1.1rem;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-weight:400;font-size:1.8rem;line-height:1;color:var(--blue);transition:transform .2s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{padding:0 0 20px;color:#555}
+
+  /* final cta */
+  .final{background:var(--ink);color:var(--paper);text-align:center;position:relative;overflow:hidden}
+  .final .big{font-weight:900;font-style:italic;font-size:clamp(3rem,10vw,7rem);line-height:.9;letter-spacing:-.03em;direction:ltr}
+  .final .big b{color:var(--blue)}
+  .final p{color:#aaa;margin:18px auto 30px;max-width:30em}
+  .final .phone{display:block;margin-top:18px;font-weight:800;font-size:1.3rem;letter-spacing:.04em}
+  footer{background:var(--ink);color:#666;border-top:1px solid #1f1f1f;padding:24px 0;font-size:.85rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:#999}
+
+  /* sticky whatsapp bar */
+  .sticky{position:fixed;bottom:0;inset-inline:0;z-index:60;background:rgba(11,11,11,.94);backdrop-filter:blur(8px);padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+  .sticky .wrap{display:flex;gap:10px;align-items:center}
+  .sticky .btn{flex:1;padding:14px}
+  .sticky .call{flex:0 0 auto;background:transparent;color:var(--paper);border:2px solid #444;padding:12px 16px}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    nav ul{display:none}
+    .hero .wrap{grid-template-columns:1fr;min-height:0;gap:0}
+    .hero-copy{padding:40px 0 8px;text-align:center}
+    h1 .brand{text-align:center}
+    .hero-lead{margin-inline:auto}
+    .hero-cta{justify-content:center}
+    .kicker::before{display:none}
+    .hero-img{width:100%;max-width:340px;margin-inline:auto}
+    .medal{top:16%;left:4px}
+    .cards,.prices,.quotes{grid-template-columns:1fr}
+    .price.hot{transform:none}
+    .who{grid-template-columns:1fr 1fr}
+    .about,.loc{grid-template-columns:1fr;gap:40px}
+    .about-img{max-width:380px;margin-inline:auto 20px}
+    .steps{grid-template-columns:1fr 1fr}
+    .step:nth-child(3){border-right:0}
+    .step{border-bottom:1px solid #ddd}
+    .gallery{grid-template-columns:1fr 1fr}
+    .gallery > :first-child{grid-column:1 / -1}
+    section{padding:64px 0}
+    .offer .wrap{justify-content:center;text-align:center}
+  }
+  @media (min-width:901px){ .sticky{display:none} body{padding-bottom:0} }
+  @media (max-width:480px){
+    .who{grid-template-columns:1fr}
+    .stats{grid-template-columns:1fr 1fr 1fr}
+    .stat b{font-size:1.25rem}
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo en">YARINCO <b>BJJ</b></a>
+    <ul>
+      <li><a href="#training">אימונים</a></li>
+      <li><a href="#about">עליי</a></li>
+      <li><a href="#pricing">מחירים</a></li>
+      <li><a href="#location">מיקום</a></li>
+      <li><a href="#faq">שאלות</a></li>
+    </ul>
+    <a class="btn btn-blue btn-sm wa-link" href="#">לפרטים</a>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<header class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"><span class="en">BJJ</span></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="kicker">תל אביב · אימונים אישיים</span>
+      <h1>
+        <span class="brand en">YARINCO <b>BJJ</b></span>
+        אימונים פרטיים
+      </h1>
+      <p class="hero-sub">ג'יו ג'יטסו ברזילאי<i>/</i><span class="en">MMA</span><i>/</i>הגנה עצמית</p>
+      <p class="hero-lead">בואו לפתח מיומנויות לחימה ויכולות אתלטיות, בקצב שלכם ועם מאמן שמתמקד רק בכם.</p>
+      <div class="hero-cta">
+        <a class="btn btn-blue wa-link" href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.3-1.5-5.2C2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.2 0 12 0 5.5 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.7 1.4 5.7 1.4 6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.3z"/></svg>
+          שלחו הודעה בוואטסאפ
+        </a>
+        <a class="btn btn-ghost" href="#pricing">מחירים</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="img/hero.webp" alt="ירין עם מדליית זהב בתחרות No Gi, ומתחת תמונה שלו שולט על יריב בקרקע" width="690" height="1205">
+      <div class="medal"><small>NO GI</small>מדליית זהב</div>
+    </div>
+  </div>
+</header>
+
+<!-- ========== OFFER STRIP ========== -->
+<div class="offer">
+  <div class="offer-inner">
+    <div class="wrap">
+      <div>
+        <h2>אימון ניסיון ב־<span class="ph">[מחיר] ₪</span></h2>
+        <p>מגיעים, מתאמנים ומחליטים אחרי זה. בלי התחייבות.</p>
+      </div>
+      <a class="btn wa-link" href="#">קבעו אימון ניסיון</a>
+    </div>
+  </div>
+</div>
+
+<!-- ========== DISCIPLINES ========== -->
+<section class="dark" id="training">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">מה מתאמנים</span>
+      <h2 class="title">שלוש דיסציפלינות, <em>מאמן אחד.</em></h2>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <span class="num en">01</span>
+        <div class="bar"></div>
+        <h3>ג'יו ג'יטסו ברזילאי</h3>
+        <p>קרקע, שליטה והכנעות. עם גי ובלי גי (No Gi), מהבסיס ועד הכנה לתחרויות.</p>
+      </article>
+      <article class="card">
+        <span class="num en">02</span>
+        <div class="bar"></div>
+        <h3 class="en">MMA</h3>
+        <p>משלבים עמידה וקרקע: הפלות, שליטה, חבטות ומעברים בין מצבים.</p>
+      </article>
+      <article class="card">
+        <span class="num en">03</span>
+        <div class="bar"></div>
+        <h3>הגנה עצמית</h3>
+        <p>כלים פרקטיים למצבים אמיתיים: שחרור מאחיזות, שליטה ויציאה בטוחה.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHO IT'S FOR ========== -->
+<section class="fog">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">למי זה מתאים</span>
+      <h2 class="title">לא צריך ניסיון. <em>צריך רק להגיע.</em></h2>
+    </div>
+    <div class="who">
+      <div><h3>מתחילים</h3><p>אף פעם לא עליתם על מזרן? מתחילים מאפס, בקצב שלכם.</p></div>
+      <div><h3>מתחרים</h3><p>הכנה לתחרויות, בניית משחק אישי ותיקון נקודות חולשה.</p></div>
+      <div><h3>הגנה עצמית</h3><p>ביטחון בעצמכם וכלים שעובדים גם מחוץ לאולם.</p></div>
+      <div><h3><span class="ph">[ילדים / נוער]</span></h3><p><span class="ph">[למחוק אם לא רלוונטי]</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="dark" id="about">
+  <div class="wrap about">
+    <div class="about-img">
+      <img src="img/portrait.webp" alt="ירין, מאמן ג'יו ג'יטסו" width="470" height="560">
+    </div>
+    <div>
+      <div class="sec-head" style="margin-bottom:22px">
+        <span class="kicker">המאמן</span>
+        <h2 class="title">היי, אני <em>ירין.</em></h2>
+      </div>
+      <p><span class="ph">[2–3 משפטים עליך: מתי התחלת, מה ג'יו ג'יטסו נתן לך ולמה אתה מאמן]</span></p>
+      <p>מתחרה פעיל, זוכה מדליית זהב ב־<span class="en">No Gi</span>, ומאמן שבונה כל אימון לפי המתאמן שמולו.</p>
+      <div class="stats">
+        <div class="stat"><b class="ph">[חגורה]</b><span>דרגה</span></div>
+        <div class="stat"><b class="ph">[X]</b><span>שנות אימון</span></div>
+        <div class="stat"><b class="ph">[X]</b><span>מדליות</span></div>
+      </div>
+      <span class="club en"><i></i>JOHNNY DOES JIU JITSU</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHAT A SESSION LOOKS LIKE ========== -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">איך נראה אימון</span>
+      <h2 class="title">שעה אחת, <em>ממוקדת בכם.</em></h2>
+      <p>משך אימון: <span class="ph">[60 דקות]</span></p>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>חימום</h3><p>ניידות, תנועה ותרגילים ספציפיים לג'יו ג'יטסו.</p></div>
+      <div class="step"><h3>טכניקה</h3><p>נושא אחד לעומק, מותאם לרמה ולמטרות שלכם.</p></div>
+      <div class="step"><h3>דריל</h3><p>חזרות מול התנגדות שהולכת ועולה.</p></div>
+      <div class="step"><h3>ספארינג</h3><p>מיישמים חי, עם פידבק בזמן אמת.</p></div>
+    </div>
+    <div class="gallery">
+      <img src="img/action.webp" alt="ירין שולט ביריב בקרקע" width="580" height="500">
+      <div class="gph">[תמונה / סרטון<br>מאימון]</div>
+      <div class="gph">[תמונה / סרטון<br>מאימון]</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PRICING ========== -->
+<section class="dark" id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">מחירים</span>
+      <h2 class="title">בוחרים מסלול, <em>מתחילים.</em></h2>
+    </div>
+    <div class="prices">
+      <div class="price">
+        <h3>אימון ניסיון</h3>
+        <div class="amt"><span class="ph">[₪]</span></div>
+        <span class="per">חד פעמי</span>
+        <ul>
+          <li>היכרות ובדיקת רמה</li>
+          <li>בניית תוכנית אישית</li>
+          <li>בלי התחייבות</li>
+        </ul>
+        <a class="btn btn-blue wa-link" href="#">לקביעת אימון</a>
+      </div>
+      <div class="price hot">
+        <span class="tag">הכי משתלם</span>
+        <h3>כרטיסייה <span class="ph">[X] אימונים</span></h3>
+        <div class="amt"><span class="ph">[₪]</span></div>
+        <span class="per"><span class="ph">[₪]</span> לאימון</span>
+        <ul>
+          <li>תוכנית אימונים אישית</li>
+          <li>גמישות בזמנים</li>
+          <li><span class="ph">[הטבה נוספת]</span></li>
+        </ul>
+        <a class="btn wa-link" href="#">אני רוצה</a>
+      </div>
+      <div class="price">
+        <h3>אימון זוגי</h3>
+        <div class="amt"><span class="ph">[₪]</span></div>
+        <span class="per">לאימון, לשניים</span>
+        <ul>
+          <li>מתאמנים עם חבר/ה</li>
+          <li>ספארינג מבוקר</li>
+          <li>מחיר מופחת לאדם</li>
+        </ul>
+        <a class="btn btn-blue wa-link" href="#">לפרטים</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LOCATION ========== -->
+<section id="location">
+  <div class="wrap loc">
+    <div class="loc-info">
+      <span class="kicker">מיקום</span>
+      <h3>הרב יוסף צוברי 22<br>תל אביב</h3>
+      <p class="near">מול בית הספר לאומנויות</p>
+      <p class="hours">שעות אימון: <span class="ph">[ימים ושעות]</span></p>
+      <div class="loc-btns">
+        <a class="btn btn-blue" target="_blank" rel="noopener" href="https://waze.com/ul?q=%D7%94%D7%A8%D7%91%20%D7%99%D7%95%D7%A1%D7%A3%20%D7%A6%D7%95%D7%91%D7%A8%D7%99%2022%20%D7%AA%D7%9C%20%D7%90%D7%91%D7%99%D7%91&navigate=yes">נווטו ב־<span class="en">Waze</span></a>
+        <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%D7%94%D7%A8%D7%91%20%D7%99%D7%95%D7%A1%D7%A3%20%D7%A6%D7%95%D7%91%D7%A8%D7%99%2022%20%D7%AA%D7%9C%20%D7%90%D7%91%D7%99%D7%91">Google Maps</a>
+      </div>
+    </div>
+    <div class="map">
+      <iframe title="מפה: הרב יוסף צוברי 22 תל אביב" loading="lazy" src="https://www.google.com/maps?q=%D7%94%D7%A8%D7%91%20%D7%99%D7%95%D7%A1%D7%A3%20%D7%A6%D7%95%D7%91%D7%A8%D7%99%2022%20%D7%AA%D7%9C%20%D7%90%D7%91%D7%99%D7%91&output=embed&hl=he"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">מה אומרים</span>
+      <h2 class="title">מתאמנים <em>מספרים.</em></h2>
+    </div>
+    <div class="quotes">
+      <div class="quote"><p><span class="ph">[המלצה ממתאמן/ת]</span></p><b><span class="ph">[שם]</span></b></div>
+      <div class="quote"><p><span class="ph">[המלצה ממתאמן/ת]</span></p><b><span class="ph">[שם]</span></b></div>
+      <div class="quote"><p><span class="ph">[המלצה ממתאמן/ת]</span></p><b><span class="ph">[שם]</span></b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="fog" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">שאלות נפוצות</span>
+      <h2 class="title">לפני שמגיעים</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>צריך ניסיון קודם?</summary>
+        <p>ממש לא. רוב המתאמנים מתחילים מאפס, והאימון נבנה לפי הרמה שלכם.</p>
+      </details>
+      <details>
+        <summary>מה להביא?</summary>
+        <p>בגדי ספורט נוחים (עדיף רשגארד או חולצה צמודה ומכנס קצר בלי כיסים), בקבוק מים ומגבת. <span class="ph">[גי: יש / אין צורך]</span></p>
+      </details>
+      <details>
+        <summary>כמה זמן נמשך אימון?</summary>
+        <p><span class="ph">[60 דקות]</span></p>
+      </details>
+      <details>
+        <summary>אני לא בכושר. זה בסדר?</summary>
+        <p>בהחלט. הכושר נבנה תוך כדי אימונים, והעומס מותאם אליכם.</p>
+      </details>
+      <details>
+        <summary>אפשר להתאמן בזוג?</summary>
+        <p>כן, יש מסלול אימון זוגי. פרטים בחלק של המחירים.</p>
+      </details>
+      <details>
+        <summary>מה מדיניות הביטולים?</summary>
+        <p><span class="ph">[למשל: ביטול עד 24 שעות לפני האימון ללא חיוב]</span></p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FINAL CTA ========== -->
+<section class="final">
+  <div class="wrap">
+    <div class="big"><span class="en">YARINCO</span> <b class="en">BJJ</b></div>
+    <p>השלב הבא הוא הודעה אחת. שלחו בוואטסאפ ונקבע אימון ראשון.</p>
+    <a class="btn btn-blue wa-link" href="#">שלחו הודעה בוואטסאפ</a>
+    <a class="phone en" href="tel:+972558827522">055-882-7522</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span class="en">YARINCO BJJ</span> · הרב יוסף צוברי 22, תל אביב</span>
+    <a href="#" class="ph">[אינסטגרם]</a>
+  </div>
+</footer>
+
+<!-- sticky bottom bar -->
+<div class="sticky">
+  <div class="wrap">
+    <a class="btn btn-blue wa-link" href="#">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.3-1.5-5.2C2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.2 0 12 0 5.5 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.7 1.4 5.7 1.4 6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.3z"/></svg>
+      וואטסאפ
+    </a>
+    <a class="btn call" href="tel:+972558827522" aria-label="התקשרו"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg></a>
+  </div>
+</div>
+
+<script>
+  // All WhatsApp buttons share one pre-filled message
+  const WA_PHONE = '972558827522';
+  const WA_TEXT  = 'היי ירין, ראיתי את המודעה ואשמח לפרטים על אימון פרטי 🥋';
+  const waUrl = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(WA_TEXT)}`;
+  document.querySelectorAll('.wa-link').forEach(a => { a.href = waUrl; a.target = '_blank'; a.rel = 'noopener'; });
+</script>
+</body>
+</html>
