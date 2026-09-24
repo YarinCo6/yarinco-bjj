@@ -21,6 +21,7 @@
     --fog:#f1f1f1;
     --gray:#8c8c8c;
     --blue:#1f1fff;
+    --sky:#4fb0ff; /* blue text on dark backgrounds */
     --gold:#f4c419;
     --wa:#1f1fff;
   }
@@ -39,7 +40,7 @@
   nav{position:sticky;top:0;z-index:50;background:var(--ink);color:var(--paper)}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
   .logo{font-weight:900;font-style:italic;font-size:1.35rem;letter-spacing:-.02em}
-  .logo b{color:var(--blue)}
+  .logo b{color:var(--sky)}
   nav ul{display:flex;gap:28px;list-style:none;font-weight:500;font-size:.95rem}
   nav ul a{opacity:.75;transition:opacity .2s}
   nav ul a:hover{opacity:1}
@@ -91,7 +92,7 @@
   .sec-head .kicker{margin-bottom:10px}
   h2.title{font-weight:900;font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.05;letter-spacing:-.01em}
   h2.title em{font-style:normal;color:var(--blue)}
-  .dark h2.title em{color:var(--blue)}
+  .dark h2.title em{color:var(--sky)}
   .sec-head p{color:var(--gray);margin-top:10px;max-width:36em}
 
   /* disciplines */
@@ -148,7 +149,7 @@
   .price.hot .per{color:#dcdcff}
   .price ul{list-style:none;margin:20px 0 26px;flex:1}
   .price li{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:.95rem}
-  .price li::before{content:"✓";color:var(--blue);font-weight:900;margin-left:8px}
+  .price li::before{content:"✓";color:var(--sky);font-weight:900;margin-left:8px}
   .price.hot li::before{color:var(--paper)}
   .price .btn{width:100%}
   .price.hot .btn{background:var(--paper);color:var(--blue)}
@@ -165,7 +166,7 @@
   /* testimonials */
   .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
   .quote{background:var(--ink-2);border-radius:12px;padding:28px 24px;border:1px solid #262626}
-  .quote::before{content:"”";display:block;font-weight:900;font-size:4rem;line-height:.6;color:var(--blue);margin-bottom:10px}
+  .quote::before{content:"”";display:block;font-weight:900;font-size:4rem;line-height:.6;color:var(--sky);margin-bottom:10px}
   .quote p{color:#ddd}
   .quote b{display:block;margin-top:14px;font-size:.9rem;color:var(--gray)}
 
@@ -181,7 +182,7 @@
   /* final cta */
   .final{background:var(--ink);color:var(--paper);text-align:center;position:relative;overflow:hidden}
   .final .big{font-weight:900;font-style:italic;font-size:clamp(3rem,10vw,7rem);line-height:.9;letter-spacing:-.03em;direction:ltr}
-  .final .big b{color:var(--blue)}
+  .final .big b{color:var(--sky)}
   .final p{color:#aaa;margin:18px auto 30px;max-width:30em}
   .final .phone{display:block;margin-top:18px;font-weight:800;font-size:1.3rem;letter-spacing:.04em}
   footer{background:var(--ink);color:#666;border-top:1px solid #1f1f1f;padding:24px 0;font-size:.85rem}
