@@ -230,6 +230,52 @@
     .stats{grid-template-columns:1fr 1fr 1fr}
     .stat b{font-size:1.25rem}
   }
+
+  /* ---------- PHONE: one screen, no scrolling ---------- */
+  @media (max-width:900px){
+    html,body{height:100%;overflow:hidden}
+    body{display:flex;flex-direction:column;height:100svh}
+    body>nav{flex:none}
+    body>:not(nav):not(.one):not(.float):not(script){display:none}
+    .hero{flex:1;min-height:0;display:flex}
+    .hero .wrap{display:flex;flex-direction:column;flex:1;min-height:0}
+    .hero-copy{flex:none;padding:24px 0 12px}
+    .hero-cta{margin-top:18px}
+    .hero-img{flex:1;min-height:0;max-width:none;display:flex;align-items:flex-end;justify-content:center}
+    .hero-img img{height:100%;width:auto;max-width:100%;object-fit:contain;object-position:bottom}
+    /* the floating WhatsApp/location icons and the top logo cover these */
+    nav .btn,.hero-cta,.hero-img,h1 .brand{display:none}
+    nav .wrap{justify-content:flex-end}
+  }
+
+  /* ---------- phone one-screen: short headline + 3 drop-downs ---------- */
+  .one{display:none}
+  @media (max-width:900px){
+    .one{display:flex;flex-direction:column;flex:1;min-height:0;padding:28px 16px 96px;overflow:hidden}
+    .one-title{font-weight:900;font-size:clamp(2rem,9vw,2.6rem);line-height:1.05;letter-spacing:-.01em}
+    .one-sub{color:#444;font-size:1.05rem;margin-top:8px}
+    .tiles{margin-top:26px;display:flex;flex-direction:column;gap:10px}
+    .tile{display:flex;align-items:center;gap:12px;width:100%;padding:16px;border:1.5px solid #e2e2e2;border-radius:12px;background:#fff;font:800 1.15rem 'Heebo',sans-serif;color:var(--ink);text-align:start;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:border-color .15s,transform .1s}
+    .tile:active{transform:scale(.98);border-color:var(--blue)}
+    .tile .ic,.pop h2 .ic{font-size:1.3rem;line-height:1}
+    .tile .go{margin-inline-start:auto;width:9px;height:9px;border-left:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);transform:rotate(45deg)}
+    .pop{margin:auto;width:calc(100% - 40px);max-width:360px;border:0;border-radius:16px;padding:22px 20px 20px;color:var(--ink);box-shadow:0 20px 60px rgba(0,0,0,.35);border-top:5px solid var(--blue)}
+    .pop::backdrop{background:rgba(11,11,11,.55);backdrop-filter:blur(2px)}
+    .pop[open]{animation:popIn .18s ease-out}
+    @keyframes popIn{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+    .pop h2{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.35rem;margin-bottom:12px}
+    .pop p{line-height:1.55}
+    .pop ul,.pop ol{padding-inline-start:1.2em;line-height:1.55}
+    .pop li{padding:3px 0}
+    .pop li::marker{color:var(--blue);font-weight:800}
+    .pop p+ul,.pop ul+p,.pop ol+p{margin-top:8px}
+    .pop .muted{color:var(--gray);font-size:.92rem}
+    .pop{max-height:calc(100svh - 32px);overflow:auto}
+    .pop-img{display:block;width:100%;height:auto;max-height:36svh;object-fit:contain;margin-top:14px}
+    .pop-img.photo{object-fit:cover;border-radius:10px}
+    #pop-about .pop-img{object-position:85% 50%} /* medal photo sits a little to the right */
+    .pop .x{position:absolute;top:12px;left:12px;width:34px;height:34px;border:0;border-radius:50%;background:var(--fog);font-size:15px;cursor:pointer;color:var(--ink)}
+  }
 </style>
 </head>
 <body>
@@ -272,6 +318,51 @@
 </header>
 
 <!-- ========== OFFER STRIP ========== -->
+<!-- ========== PHONE ONE-SCREEN (hidden on desktop) ========== -->
+<main class="one" id="one">
+  <h1 class="one-title">אימון ראשון בלי סיכון</h1>
+  <p class="one-sub">לא נהניתם? לא משלמים.</p>
+  <div class="tiles">
+    <button class="tile" data-open="pop-about"><span class="ic">🥇</span>מי אני<span class="go" aria-hidden="true"></span></button>
+    <button class="tile" data-open="pop-who"><span class="ic">🎯</span>למי זה מתאים<span class="go" aria-hidden="true"></span></button>
+    <button class="tile" data-open="pop-start"><span class="ic">📲</span>איך מתחילים<span class="go" aria-hidden="true"></span></button>
+  </div>
+
+  <dialog class="pop" id="pop-about">
+    <button class="x" aria-label="סגירה">✕</button>
+    <h2><span class="ic">🥇</span>מי אני</h2>
+    <p>מתחרה פעיל בארץ ובעולם, בעל כ־10 שנות ניסיון.</p>
+    <ul>
+      <li>מקום ראשון, אליפות ישראל 2025</li>
+      <li>מקום ראשון, אליפות הצפון 2025</li>
+      <li>מקום ראשון, BJJ Nation ישראל 2026</li>
+    </ul>
+    <img class="pop-img" src="img/hero-medal.webp" alt="ירין עם מדליית זהב" width="304" height="375">
+  </dialog>
+  <dialog class="pop" id="pop-who">
+    <button class="x" aria-label="סגירה">✕</button>
+    <h2><span class="ic">🎯</span>למי זה מתאים</h2>
+    <ul>
+      <li>מתחילים מאפס, בלי ניסיון ובלי כושר</li>
+      <li>מתחרים שרוצים לעלות רמה</li>
+      <li>מי שרוצה הגנה עצמית וביטחון</li>
+    </ul>
+    <p class="muted">ג'יו ג'יטסו ברזילאי · MMA · הגנה עצמית</p>
+    <img class="pop-img photo" src="img/grapple-2.webp" alt="ירין בקרב בתחרות" width="1200" height="800">
+  </dialog>
+  <dialog class="pop" id="pop-start">
+    <button class="x" aria-label="סגירה">✕</button>
+    <h2><span class="ic">📲</span>איך מתחילים</h2>
+    <ol>
+      <li>שולחים הודעה בוואטסאפ</li>
+      <li>מתאמים אימון היכרות</li>
+      <li>מתחילים להתאמן</li>
+    </ol>
+    <p class="muted">הרב יוסף צוברי 22, תל אביב</p>
+    <img class="pop-img" src="img/grapple-1.webp" alt="ירין באימון קרקע" width="287" height="431">
+  </dialog>
+</main>
+
 <div class="offer">
   <div class="offer-inner">
     <div class="wrap">
@@ -507,6 +598,15 @@
 
 <script>
   // All WhatsApp buttons share one pre-filled message
+  document.querySelectorAll('[data-open]').forEach(b => b.addEventListener('click', () => document.getElementById(b.dataset.open).showModal()));
+  document.querySelectorAll('dialog.pop').forEach(d => {
+    d.querySelector('.x').addEventListener('click', () => d.close());
+    d.addEventListener('click', e => { // tap on the dimmed backdrop, outside the window
+      const r = d.getBoundingClientRect();
+      if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) d.close();
+    });
+  });
+
   const WA_PHONE = '972558827522';
   const WA_TEXT  = 'היי ירין, ראיתי את המודעה ואשמח לפרטים על אימון פרטי 🥋';
   const waUrl = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(WA_TEXT)}`;
