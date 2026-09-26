@@ -252,10 +252,10 @@
   .one{display:none}
   @media (max-width:900px){
     .one{display:flex;flex-direction:column;flex:1;min-height:0;padding:28px 16px 96px;overflow:hidden}
-    .one-title{font-weight:900;font-size:clamp(2rem,9vw,2.6rem);line-height:1.05;letter-spacing:-.01em}
+    .one-title{font-weight:900;font-size:clamp(2rem,9vw,2.6rem);line-height:1.3;letter-spacing:-.01em}
     .one-sub{color:#444;font-size:1.05rem;margin-top:8px}
     .tiles{margin-top:26px;display:flex;flex-direction:column;gap:10px}
-    .tile{display:flex;align-items:center;gap:12px;width:100%;padding:16px;border:1.5px solid #e2e2e2;border-radius:12px;background:#fff;font:800 1.15rem 'Heebo',sans-serif;color:var(--ink);text-align:start;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:border-color .15s,transform .1s}
+    .tile{display:flex;align-items:center;gap:12px;width:100%;padding:16px;border:1.5px solid var(--fog);border-radius:12px;background:var(--fog);font:800 1.15rem 'Heebo',sans-serif;color:var(--ink);text-align:start;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:border-color .15s,transform .1s}
     .tile:active{transform:scale(.98);border-color:var(--blue)}
     .tile .ic,.pop h2 .ic{font-size:1.3rem;line-height:1}
     .tile .go{margin-inline-start:auto;width:9px;height:9px;border-left:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);transform:rotate(45deg)}
@@ -272,6 +272,7 @@
     .pop .muted{color:var(--gray);font-size:.92rem}
     .pop{max-height:calc(100svh - 32px);overflow:auto}
     .pop-img{display:block;width:100%;height:auto;max-height:36svh;object-fit:contain;margin-top:22px}
+    .pop-img:not(.photo){background:var(--fog);border-radius:10px} /* cut-out photos sit on the same light gray as the buttons */
     .pop-img.photo{object-fit:cover;border-radius:10px}
     #pop-about .pop-img{object-position:68% 50%} /* medal photo sits a little to the right */
     .pop .x{position:absolute;top:12px;left:12px;width:34px;height:34px;border:0;border-radius:50%;background:var(--fog);font-size:15px;cursor:pointer;color:var(--ink)}
@@ -320,17 +321,17 @@
 <!-- ========== OFFER STRIP ========== -->
 <!-- ========== PHONE ONE-SCREEN (hidden on desktop) ========== -->
 <main class="one" id="one">
-  <h1 class="one-title">אימון ראשון בלי סיכון</h1>
-  <p class="one-sub">לא נהניתם? לא משלמים.</p>
+  <h1 class="one-title">בואו לפתח מיומנויות לחימה מאפס וללמוד להגן על עצמכם</h1>
+  <p class="one-sub">אין צורך בניסיון קודם.</p>
   <div class="tiles">
-    <button class="tile" data-open="pop-about"><span class="ic">🥇</span>מי אני?<span class="go" aria-hidden="true"></span></button>
-    <button class="tile" data-open="pop-who"><span class="ic">🎯</span>למי זה מתאים?<span class="go" aria-hidden="true"></span></button>
-    <button class="tile" data-open="pop-start"><span class="ic">📲</span>איך מתחילים?<span class="go" aria-hidden="true"></span></button>
+    <button class="tile" data-open="pop-about">מי אני?<span class="go" aria-hidden="true"></span></button>
+    <button class="tile" data-open="pop-who">למי זה מתאים?<span class="go" aria-hidden="true"></span></button>
+    <button class="tile" data-open="pop-start">איך מתחילים?<span class="go" aria-hidden="true"></span></button>
   </div>
 
   <dialog class="pop" id="pop-about">
     <button class="x" aria-label="סגירה">✕</button>
-    <h2><span class="ic">🥇</span>מי אני?</h2>
+    <h2>מי אני?</h2>
     <p>אני ירין כהן, מתחרה פעיל בארץ ובעולם.<br>בעל כ־10 שנות ניסיון.</p>
     <ul>
       <li>מקום ראשון, אליפות ישראל 2025</li>
@@ -341,7 +342,7 @@
   </dialog>
   <dialog class="pop" id="pop-who">
     <button class="x" aria-label="סגירה">✕</button>
-    <h2><span class="ic">🎯</span>למי זה מתאים?</h2>
+    <h2>למי זה מתאים?</h2>
     <ul>
       <li>מתחילים מאפס, אין צורך בניסיון קודם או בכושר, נשיג אותם ביחד.</li>
       <li>מי שרוצה להשיג תחושת ביטחון ואת היכולת להגן על עצמו</li>
@@ -352,7 +353,7 @@
   </dialog>
   <dialog class="pop" id="pop-start">
     <button class="x" aria-label="סגירה">✕</button>
-    <h2><span class="ic">📲</span>איך מתחילים?</h2>
+    <h2>איך מתחילים?</h2>
     <ol>
       <li>שולחים הודעה בוואטסאפ</li>
       <li>מתאמים אימון היכרות</li>
