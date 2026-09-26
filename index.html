@@ -259,21 +259,21 @@
     .tile:active{transform:scale(.98);border-color:var(--blue)}
     .tile .ic,.pop h2 .ic{font-size:1.3rem;line-height:1}
     .tile .go{margin-inline-start:auto;width:9px;height:9px;border-left:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);transform:rotate(45deg)}
-    .pop{margin:auto;width:calc(100% - 40px);max-width:360px;border:0;border-radius:16px;padding:22px 20px 20px;color:var(--ink);box-shadow:0 20px 60px rgba(0,0,0,.35);border-top:5px solid var(--blue)}
+    .pop{margin:auto;width:calc(100% - 40px);max-width:360px;border:0;border-radius:16px;padding:26px 22px 22px;color:var(--ink);box-shadow:0 20px 60px rgba(0,0,0,.35);border-top:5px solid var(--blue)}
     .pop::backdrop{background:rgba(11,11,11,.55);backdrop-filter:blur(2px)}
     .pop[open]{animation:popIn .18s ease-out}
     @keyframes popIn{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
-    .pop h2{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.35rem;margin-bottom:12px}
-    .pop p{line-height:1.55}
-    .pop ul,.pop ol{padding-inline-start:1.2em;line-height:1.55}
-    .pop li{padding:3px 0}
+    .pop h2{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.35rem;margin-bottom:18px}
+    .pop p{line-height:1.75;font-size:1.05rem}
+    .pop ul,.pop ol{padding-inline-start:1.2em;line-height:1.6;font-size:1.05rem}
+    .pop li{padding:6px 0}
     .pop li::marker{color:var(--blue);font-weight:800}
-    .pop p+ul,.pop ul+p,.pop ol+p{margin-top:8px}
+    .pop p+ul,.pop ul+p,.pop ol+p{margin-top:14px}
     .pop .muted{color:var(--gray);font-size:.92rem}
     .pop{max-height:calc(100svh - 32px);overflow:auto}
-    .pop-img{display:block;width:100%;height:auto;max-height:36svh;object-fit:contain;margin-top:14px}
+    .pop-img{display:block;width:100%;height:auto;max-height:36svh;object-fit:contain;margin-top:22px}
     .pop-img.photo{object-fit:cover;border-radius:10px}
-    #pop-about .pop-img{object-position:85% 50%} /* medal photo sits a little to the right */
+    #pop-about .pop-img{object-position:68% 50%} /* medal photo sits a little to the right */
     .pop .x{position:absolute;top:12px;left:12px;width:34px;height:34px;border:0;border-radius:50%;background:var(--fog);font-size:15px;cursor:pointer;color:var(--ink)}
   }
 </style>
@@ -331,7 +331,7 @@
   <dialog class="pop" id="pop-about">
     <button class="x" aria-label="סגירה">✕</button>
     <h2><span class="ic">🥇</span>מי אני</h2>
-    <p>מתחרה פעיל בארץ ובעולם, בעל כ־10 שנות ניסיון.</p>
+    <p>מתחרה פעיל בארץ ובעולם.<br>בעל כ־10 שנות ניסיון.</p>
     <ul>
       <li>מקום ראשון, אליפות ישראל 2025</li>
       <li>מקום ראשון, אליפות הצפון 2025</li>
@@ -345,7 +345,7 @@
     <ul>
       <li>מתחילים מאפס, בלי ניסיון ובלי כושר</li>
       <li>מתחרים שרוצים לעלות רמה</li>
-      <li>מי שרוצה הגנה עצמית וביטחון</li>
+      <li>מי שרוצה להשיג תחושת ביטחון ואת היכולת להגן על עצמו</li>
     </ul>
     <p class="muted">ג'יו ג'יטסו ברזילאי · MMA · הגנה עצמית</p>
     <img class="pop-img photo" src="img/grapple-2.webp" alt="ירין בקרב בתחרות" width="1200" height="800">
